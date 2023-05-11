@@ -4,8 +4,10 @@ import BoxList from "./ColorBox/BoxList";
 function App() {
   return (
     <div className="App">
-      <header className="App-header"></header>
-      <BoxList />
+      <header className="App-header">App</header>
+      <body className="App-content">
+        <BoxList />
+      </body>
     </div>
   );
 }
