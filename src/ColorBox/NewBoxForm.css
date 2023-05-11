@@ -1,0 +1,14 @@
+.NewBoxForm-form {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.NewBoxForm-color, .NewBoxForm-height, .NewBoxForm-width {
+    margin: 1rem;
+}
+
+.NewBoxForm-input {
+    width: 100px;
+}
