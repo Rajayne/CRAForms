@@ -1,9 +1,9 @@
 import React from "react";
 
-const Box = () => {
+const Box = ({ color, h, w }) => {
   return (
     <div>
-      <h2>Box</h2>
+      <div style={{ backgroundColor: color, height: h, width: w }}></div>
     </div>
   );
 };

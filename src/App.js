@@ -5,9 +5,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">App</header>
-      <body className="App-content">
+      <div className="App-content">
         <BoxList />
-      </body>
+      </div>
     </div>
   );
 }
