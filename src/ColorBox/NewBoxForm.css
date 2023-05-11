@@ -9,6 +9,10 @@
     margin: 1rem;
 }
 
+.NewBoxForm-label {
+    margin: 0 5px 0 0;
+}
+
 .NewBoxForm-input {
     width: 100px;
 }
