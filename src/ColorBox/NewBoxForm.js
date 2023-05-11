@@ -7,7 +7,8 @@ const NewBoxForm = () => {
   const { color, height, width } = formData;
 
   const handleChange = (e) => {
-    alert(e.target.name);
+    const { name, value } = e.target;
+    setFormData((formData) => ({ ...formData, [name]: value }));
   };
   const handleSubmit = (e) => {
     alert("Submitted!");
