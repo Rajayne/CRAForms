@@ -4,17 +4,22 @@ import NewBoxForm from "./NewBoxForm";
 
 const BoxList = () => {
   const initialState = [
-    { color: "red", h: "50px", w: "50px" },
-    { color: "blue", h: "100px", w: "100px" },
+    { color: "red", height: "50", width: "50" },
+    { color: "blue", height: "100", width: "100" },
   ];
   const [boxes, setBoxes] = useState(initialState);
+
+  const addBox = (newBox) => {
+    setBoxes((boxes) => [...boxes, { ...newBox }]);
+  };
+
   return (
     <div>
       <h1>Box List</h1>
       {boxes.map((box) => (
-        <Box color={box.color} h={box.h} w={box.w} />
+        <Box color={box.color} h={box.height} w={box.width} />
       ))}
-      <NewBoxForm />
+      <NewBoxForm addBox={addBox} />
     </div>
   );
 };
