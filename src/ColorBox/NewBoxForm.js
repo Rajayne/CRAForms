@@ -5,15 +5,24 @@ const NewBoxForm = () => {
   const initialState = { color: "", height: "", width: "" };
   const [formData, setFormData] = useState(initialState);
   const { color, height, width } = formData;
+
+  const handleChange = (e) => {
+    alert(e.target.name);
+  };
+  const handleSubmit = (e) => {
+    alert("Submitted!");
+  };
+
   return (
     <div className="NewBoxForm">
       <h2>New Box Form</h2>
-      <form className="NewBoxForm-form">
+      <form onSubmit={handleSubmit} className="NewBoxForm-form">
         <div className="NewBoxForm-color">
           <label className="NewBoxForm-label" htmlFor="color">
             Box Color:
           </label>
           <input
+            onChange={handleChange}
             className="NewBoxForm-input"
             id="color"
             name="color"
@@ -26,6 +35,7 @@ const NewBoxForm = () => {
             Box Height(px):
           </label>
           <input
+            onChange={handleChange}
             className="NewBoxForm-input"
             id="height"
             name="height"
@@ -38,6 +48,7 @@ const NewBoxForm = () => {
             Box Width(px):
           </label>
           <input
+            onChange={handleChange}
             className="NewBoxForm-input"
             id="width"
             name="width"
@@ -45,6 +56,7 @@ const NewBoxForm = () => {
             value={width}
           ></input>
         </div>
+        <button>Add Box!</button>
       </form>
     </div>
   );
