@@ -13,6 +13,10 @@ const NewTodoForm = ({ addTodo }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!formData.value) {
+      alert("New todo must have text!");
+      return;
+    }
     addTodo({ id, ...formData });
     setId(id + 1);
     setFormData(initialState);
