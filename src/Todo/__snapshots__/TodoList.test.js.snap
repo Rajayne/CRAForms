@@ -9,11 +9,12 @@ exports[`matches snapshot 1`] = `
     <div>
       <ul>
         <li
-          data-testid="1"
           id="1"
         >
           Water the plants 
-          <button>
+          <button
+            data-testid="1"
+          >
             X
           </button>
         </li>
@@ -22,11 +23,12 @@ exports[`matches snapshot 1`] = `
     <div>
       <ul>
         <li
-          data-testid="2"
           id="2"
         >
           Feed the dog 
-          <button>
+          <button
+            data-testid="2"
+          >
             X
           </button>
         </li>
