@@ -1,6 +1,6 @@
 import React from "react";
 
-const Box = ({ key, id, color, h, w, removeBox }) => {
+const Box = ({ id, color, h, w, removeBox }) => {
   const handleRemove = () => removeBox(id);
   return (
     <div>
