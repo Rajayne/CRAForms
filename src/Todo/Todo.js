@@ -1,11 +1,14 @@
 import React from "react";
 
-const Todo = ({ text }) => {
+const Todo = ({ id, text, removeTodo }) => {
+  const handleRemove = () => {
+    removeTodo(id);
+  };
   return (
     <div>
       <ul>
-        <li>
-          {text} <button>X</button>
+        <li id={id}>
+          {text} <button onClick={handleRemove}>X</button>
         </li>
       </ul>
     </div>
