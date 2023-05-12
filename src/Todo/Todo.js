@@ -1,9 +1,11 @@
 import React from "react";
 
-const Todo = () => {
+const Todo = ({ text }) => {
   return (
     <div>
-      <h2>ToDo</h2>
+      <ul>
+        <li>{text}</li>
+      </ul>
     </div>
   );
 };

@@ -6,7 +6,7 @@ const TodoList = () => {
   return (
     <div>
       <h1>Todo List</h1>
-      <Todo />
+      <Todo text="Water the plants" />
       <NewTodoForm />
     </div>
   );
