@@ -8,11 +8,13 @@ exports[`matches snapshot 1`] = `
     </h1>
     <div>
       <div
+        data-testid="1"
         style="background-color: red; height: 50px; width: 50px;"
       />
     </div>
     <div>
       <div
+        data-testid="2"
         style="background-color: blue; height: 100px; width: 100px;"
       />
     </div>

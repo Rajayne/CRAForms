@@ -5,6 +5,7 @@ const Box = ({ id, color, h, w, removeBox }) => {
   return (
     <div>
       <div
+        data-testid={id}
         onClick={handleRemove}
         style={{ backgroundColor: color, height: `${h}px`, width: `${w}px` }}
       ></div>

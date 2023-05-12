@@ -15,7 +15,6 @@ const BoxList = () => {
 
   const removeBox = (id) => {
     setBoxes((boxes) => boxes.filter((box) => box.id !== id));
-    alert(id);
   };
 
   return (
