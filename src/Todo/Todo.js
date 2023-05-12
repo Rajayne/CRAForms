@@ -7,7 +7,7 @@ const Todo = ({ id, text, removeTodo }) => {
   return (
     <div>
       <ul>
-        <li id={id}>
+        <li id={id} data-testid={id}>
           {text} <button onClick={handleRemove}>X</button>
         </li>
       </ul>
