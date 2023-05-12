@@ -4,8 +4,8 @@ import NewBoxForm from "./NewBoxForm";
 
 const BoxList = () => {
   const initialState = [
-    { color: "red", height: "50", width: "50" },
-    { color: "blue", height: "100", width: "100" },
+    { id: 1, color: "red", height: "50", width: "50" },
+    { id: 2, color: "blue", height: "100", width: "100" },
   ];
   const [boxes, setBoxes] = useState(initialState);
 
@@ -13,11 +13,23 @@ const BoxList = () => {
     setBoxes((boxes) => [...boxes, { ...newBox }]);
   };
 
+  const removeBox = (id) => {
+    setBoxes((boxes) => boxes.filter((box) => box.id !== id));
+    alert(id);
+  };
+
   return (
     <div>
       <h1>Box List</h1>
       {boxes.map((box) => (
-        <Box color={box.color} h={box.height} w={box.width} />
+        <Box
+          key={box.id}
+          id={box.id}
+          color={box.color}
+          h={box.height}
+          w={box.width}
+          removeBox={removeBox}
+        />
       ))}
       <NewBoxForm addBox={addBox} />
     </div>

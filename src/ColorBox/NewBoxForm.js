@@ -5,6 +5,8 @@ const NewBoxForm = ({ addBox }) => {
   const initialState = { color: "#000000", height: "", width: "" };
   const [formData, setFormData] = useState(initialState);
   const { color, height, width } = formData;
+  const initialId = 3;
+  const [id, setId] = useState(initialId);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -12,7 +14,8 @@ const NewBoxForm = ({ addBox }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    addBox({ ...formData });
+    addBox({ id, ...formData });
+    setId(id + 1);
     setFormData(initialState);
   };
 
