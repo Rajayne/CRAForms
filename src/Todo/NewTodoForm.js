@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 
 const NewTodoForm = ({ addTodo }) => {
-  const initialState = { key: "", text: "" };
+  const initialState = { text: "" };
   const [formData, setFormData] = useState(initialState);
+
+  const initialId = 3;
+  const [id, setId] = useState(initialId);
+
   const handleChange = (e) => {
-    setFormData((formData) => ({ ...formData, text: e.target.value }));
+    setFormData({ text: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Submitted ${formData.text}!`);
+    addTodo({ id, ...formData });
+    setId(id + 1);
     setFormData(initialState);
   };
 

@@ -10,7 +10,7 @@ const TodoList = () => {
   const [todos, setTodos] = useState(initialTodos);
 
   const addTodo = (newTodo) => {
-    setTodos([...todos, newTodo]);
+    setTodos([...todos, { ...newTodo }]);
   };
 
   const removeTodo = (id) => {
