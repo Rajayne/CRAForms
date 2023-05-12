@@ -4,7 +4,9 @@ const Todo = ({ text }) => {
   return (
     <div>
       <ul>
-        <li>{text}</li>
+        <li>
+          {text} <button>X</button>
+        </li>
       </ul>
     </div>
   );
