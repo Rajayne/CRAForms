@@ -9,6 +9,10 @@ const TodoList = () => {
   ];
   const [todos, setTodos] = useState(initialTodos);
 
+  const addTodo = (newTodo) => {
+    setTodos([...todos, newTodo]);
+  };
+
   const removeTodo = (id) => {
     setTodos((todos) => todos.filter((todo) => todo.id !== id));
   };
@@ -23,7 +27,7 @@ const TodoList = () => {
           removeTodo={removeTodo}
         />
       ))}
-      <NewTodoForm />
+      <NewTodoForm addTodo={addTodo} />
     </div>
   );
 };

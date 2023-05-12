@@ -1,10 +1,13 @@
 import React from "react";
 
-const NewTodoForm = () => {
+const NewTodoForm = ({ addTodo }) => {
+  const handleSubmit = () => {
+    alert("Submitted!");
+  };
   return (
     <div>
       <h2>New Todo Form</h2>
-      <form className="newTodoForm">
+      <form className="newTodoForm" onSubmit={handleSubmit}>
         <input
           name="newTodo-input"
           id="newTodo-input"
