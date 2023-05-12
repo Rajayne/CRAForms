@@ -1,4 +1,9 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import {
+  render,
+  screen,
+  fireEvent,
+  getByPlaceholderText,
+} from "@testing-library/react";
 import TodoList from "./TodoList";
 
 test("renders BoxList without crashing", () => {
@@ -23,3 +28,20 @@ test("delete target todo by click", () => {
   expect(todoBtn1).not.toBeInTheDocument();
   expect(screen.getByTestId(2)).toBeInTheDocument();
 });
+
+test("add new todo", () => {
+  render(<TodoList />);
+  const todoInput = screen.getByPlaceholderText("New Todo");
+  todoInput.value = "Clean the dishes";
+  const submitBtn = screen.getByText("Submit!");
+  fireEvent.click(submitBtn);
+  expect(screen.getByTestId(3)).toBeInTheDocument();
+});
+
+// test("prevent empty new todo submission", () => {
+//   render(<TodoList />);
+//   const alertMock = jest.spyOn(window, "alert").mockImplementation();
+//   const submitBtn = screen.getByText("Submit!");
+//   fireEvent.click(submitBtn);
+//   expect(alertMock).toHaveBeenCalledTimes(1);
+// });

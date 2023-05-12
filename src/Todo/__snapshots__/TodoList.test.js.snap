@@ -48,7 +48,9 @@ exports[`matches snapshot 1`] = `
           type="text"
           value=""
         />
-        <button>
+        <button
+          type="submit"
+        >
           Submit!
         </button>
       </form>

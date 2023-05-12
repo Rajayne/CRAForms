@@ -12,11 +12,11 @@ const NewTodoForm = ({ addTodo }) => {
   };
 
   const handleSubmit = (e) => {
+    // if (!formData.text) {
+    //   alert("New todo must have text!");
+    //   return;
+    // }
     e.preventDefault();
-    if (!formData.value) {
-      alert("New todo must have text!");
-      return;
-    }
     addTodo({ id, ...formData });
     setId(id + 1);
     setFormData(initialState);
@@ -34,7 +34,7 @@ const NewTodoForm = ({ addTodo }) => {
           placeholder="New Todo"
           value={formData.text}
         ></input>
-        <button>Submit!</button>
+        <button type="submit">Submit!</button>
       </form>
     </div>
   );
